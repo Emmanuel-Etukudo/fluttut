@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tutorial_app/presentation/color_manager.dart';
-import 'package:tutorial_app/presentation/font_manager.dart';
-import 'package:tutorial_app/presentation/styles_manager.dart';
-import 'package:tutorial_app/presentation/values_manager.dart';
+import 'package:tutorial_app/presentation/resources/color_manager.dart';
+import 'package:tutorial_app/presentation/resources/font_manager.dart';
+import 'package:tutorial_app/presentation/resources/styles_manager.dart';
+import 'package:tutorial_app/presentation/resources/values_manager.dart';
 
 ThemeData getApplicationTheme() {
   return ThemeData(
@@ -56,9 +56,35 @@ ThemeData getApplicationTheme() {
       subtitle1: getMediumStyle(color: ColorManager.lightGrey, fontSize: FontSize.s14),
       caption: getRegularStyle(color: ColorManager.grey1),
       bodyText1: getRegularStyle(color: ColorManager.grey)
-    )
+    ),
 
       //input decoration theme(text form field)
+    inputDecorationTheme: InputDecorationTheme(
+      contentPadding: const EdgeInsets.all(AppPadding.p8),
+      hintStyle: getRegularStyle(color: ColorManager.grey1),
+      labelStyle: getMediumStyle(color: ColorManager.darkGrey),
+      errorStyle: getRegularStyle(color: ColorManager.error),
+
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: ColorManager.grey, width: AppSize.s1_5),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8))
+      ),
+      
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: ColorManager.primary, width: AppSize.s1_5),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8))
+      ),
+
+      errorBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: ColorManager.error, width: AppSize.s1_5),
+          borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8))
+      ),
+
+      focusedErrorBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: ColorManager.primary, width: AppSize.s1_5),
+          borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8))
+      ),
+  ),
 
   );
 }
