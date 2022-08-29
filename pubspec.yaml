@@ -29,6 +29,7 @@ environment:
 dependencies:
   #UI
   flutter_screenutil: ^5.5.2
+  flutter_svg: ^1.1.4
 
   flutter:
     sdk: flutter
@@ -59,6 +60,11 @@ flutter:
 
   assets:
     - assets/images/splash_logo.png
+    - assets/images/entrepreneurs_monochromatic.svg
+    - assets/images/financial_analyst_flatline.svg
+    - assets/images/it_support_monochromatic.svg
+    - assets/images/teacher_isometric.svg
+    - assets/images/teacher_two_color.svg
 
   fonts:
     - family: Barlow Condensed
